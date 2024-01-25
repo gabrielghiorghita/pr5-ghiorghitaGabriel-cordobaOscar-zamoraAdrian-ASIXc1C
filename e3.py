@@ -9,3 +9,4 @@ El programa, demanarà a l’usuari que escrigui per teclat un insult, en catal�
 Óscar Córdoba | Adrián Zamora | Gabriel Ghiorghita
 ASIXc1C
 """
+

@@ -6,9 +6,11 @@ troben a les posicions parelles i la mitja del nombre de les posicions senars.
 Óscar Córdoba | Adrián Zamora | Gabriel Ghiorghita
 ASIXc1C
 """
-#import random
-#print(random.randint(1,50))
+
 
 import random
-aleatorios = [random.randint(0,50) for _ in range(50)]
+aleatorios = [random.randint(0,50) for _ in range(100)]
 print(aleatorios)
+
+for i in aleatorios:
+    if i%2==0:
