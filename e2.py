@@ -15,19 +15,22 @@ nombres_senars = []
 llista_nombres = [random.randint(1, 50) for _ in range(100)]
 
 #Separem els nombres en parells i senars.
-for i in range(len(llista_nombres)):
-    if i % 2 == 0:
-        nombres_parells.append(llista_nombres[i])
-    else:
-        nombres_senars.append(llista_nombres[i])
+try:
+    for i in range(len(llista_nombres)):
+        if i % 2 == 0:
+            nombres_parells.append(llista_nombres[i])
+        else:
+            nombres_senars.append(llista_nombres[i])
 
-#Calculem la mitja dels valors parells.
-mitja_parells = sum(nombres_parells) / len(nombres_parells)
+    #Calculem la mitja dels valors parells.
+    mitja_parells = sum(nombres_parells) / len(nombres_parells)
 
-#Calculem la mitja dels valors senars.
-mitja_senars = sum(nombres_senars) / len(nombres_senars)
+    #Calculem la mitja dels valors senars.
+    mitja_senars = sum(nombres_senars) / len(nombres_senars)
 
-#Mostrem els resultats per pantalla.
-print("Llista de nombres aleatoris:", llista_nombres)
-print("Mitja dels valors parells:", mitja_parells)
-print("Mitja dels valors senars:", mitja_senars)
+    #Mostrem els resultats per pantalla.
+    print("Llista de nombres aleatoris:", llista_nombres)
+    print("Mitja dels valors parells:", mitja_parells)
+    print("Mitja dels valors senars:", mitja_senars)
+except:
+    print("Error")

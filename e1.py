@@ -30,13 +30,14 @@ temperatures_2000_a_2022=[13.6, 13.4, 13.2, 13.4, 13.9, 13.7, 13.7, 13.8, 14.0, 
 
 
 maxima_2022 = temp_max = temp_min = temperatures_2022[0]
+#En este for vamos mirando cada dato y comprobando si es mayor o menor
 try:
     for temperatura in temperatures_2022:
         if temperatura < temp_max:
             temp_max = temperatura
         elif temperatura > temp_min:
             temp_min = temperatura
-
+# Aqui sumamos
     suma_numeros = 0
     for numeros in temperatures_2022:
         suma_numeros += numeros
@@ -44,12 +45,13 @@ try:
     media_2022 = suma_numeros / len(temperatures_2022)
 
     temp_max_total = temp_min_total = temperatures_2000_a_2022[0]
+#En este for vamos mirando cada dato y comprobando si es mayor o menor
     for temperatura in temperatures_2000_a_2022:
         if temperatura > temp_max_total:
             temp_max_total = temperatura
         elif temperatura < temp_min_total:
             temp_min_total = temperatura
-
+#Aqui sumamos
     suma_numeros_total = 0
     for numeros2 in temperatures_2000_a_2022:
         suma_numeros_total += numeros2
