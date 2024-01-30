@@ -21,7 +21,7 @@ insults = [
 ]
 
 
-#Demanar al usuari un numero de la llista d'insults en catalá
+
 def triar_insult():
     print("Tria un insult:")
     for i, insult in enumerate(insults[CAT]):
@@ -35,7 +35,7 @@ def triar_insult():
             insult_esp = insults[ESP][index]
             insult_eng = insults[ENG][index]
 
-            # Mostrem les traduccions
+
             print(f'Traducció a castellà: {insult_esp}')
             print(f'Traducció a anglès: {insult_eng}')
         else:
@@ -44,5 +44,5 @@ def triar_insult():
         print("Si us plau, introdueix un número vàlid.")
 
 
-#Executar el codi
+
 triar_insult()

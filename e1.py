@@ -30,38 +30,41 @@ temperatures_2000_a_2022=[13.6, 13.4, 13.2, 13.4, 13.9, 13.7, 13.7, 13.8, 14.0, 
 
 
 maxima_2022 = temp_max = temp_min = temperatures_2022[0]
+try:
+    for temperatura in temperatures_2022:
+        if temperatura < temp_max:
+            temp_max = temperatura
+        elif temperatura > temp_min:
+            temp_min = temperatura
 
-for temperatura in temperatures_2022:
-    if temperatura < temp_max:
-        temp_max = temperatura
-    elif temperatura > temp_min:
-        temp_min = temperatura
+    suma_numeros = 0
+    for numeros in temperatures_2022:
+        suma_numeros += numeros
 
-suma_numeros = 0
-for numeros in temperatures_2022:
-    suma_numeros += numeros
+    media_2022 = suma_numeros / len(temperatures_2022)
 
-media_2022 = suma_numeros / len(temperatures_2022)
+    temp_max_total = temp_min_total = temperatures_2000_a_2022[0]
+    for temperatura in temperatures_2000_a_2022:
+        if temperatura > temp_max_total:
+            temp_max_total = temperatura
+        elif temperatura < temp_min_total:
+            temp_min_total = temperatura
 
-temp_max_total = temp_min_total = temperatures_2000_a_2022[0]
-for temperatura in temperatures_2000_a_2022:
-    if temperatura > temp_max_total:
-        temp_max_total = temperatura
-    elif temperatura < temp_min_total:
-        temp_min_total = temperatura
+    suma_numeros_total = 0
+    for numeros2 in temperatures_2000_a_2022:
+        suma_numeros_total += numeros2
 
-suma_numeros_total = 0
-for numeros2 in temperatures_2000_a_2022:
-    suma_numeros_total += numeros2
+    media_total = suma_numeros_total / len(temperatures_2000_a_2022)
 
-media_total = suma_numeros_total / len(temperatures_2000_a_2022)
+    print("●Any 2022")
+    print(f"   ⊚Màxima:{temp_min:.2f}")
+    print(f"   ⊚Mínima:{temp_max:.2f}")
+    print(f"   ⊚Mitjana:{media_2022:.2f}")
+    print("\n")
+    print("●Període 2000 a 2022")
+    print(f"    ⊚Màxima: {temp_max_total:.2f}")
+    print(f"    ⊚Mínima: {temp_min_total:.2f}")
+    print(f"    ⊚Mitjana: {media_total:.2f}")
 
-print ("●Any 2022")
-print (f"   ⊚Màxima:{temp_min:.2f}")
-print (f"   ⊚Mínima:{temp_max:.2f}")
-print (f"   ⊚Mitjana:{media_2022:.2f}")
-print ("\n")
-print("●Període 2000 a 2022")
-print(f"    ⊚Màxima: {temp_max_total:.2f}")
-print(f"    ⊚Mínima: {temp_min_total:.2f}")
-print(f"    ⊚Mitjana: {media_total:.2f}")
+except:
+    print("Error")
